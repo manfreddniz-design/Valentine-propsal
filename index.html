@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>For Bunda — Proposal</title>
+
+  <!-- confetti library (used on success slide) -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+
+  <!-- Link external CSS when using files; in CodePen paste CSS into CSS panel -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main id="app" role="main" aria-live="polite">
+    <!-- Slide 1 -->
+    <section class="slide" id="s1" aria-label="Intro">
+      <h1>Hi Bunda, I have a question for you</h1>
+      <p class="hint">Tap the question mark to continue</p>
+      <div class="square big" id="qmark" role="button" tabindex="0" aria-label="Open question">?</div>
+    </section>
+
+    <!-- Slide 2 -->
+    <section class="slide" id="s2" aria-label="Blue or Red">
+      <div class="half left"></div>
+      <div class="half right"></div>
+      <h2 class="overlay-title">Choose a color</h2>
+      <div class="choice-row overlay-row">
+        <div class="small-square blue" id="blueTab" role="button" tabindex="0">blue</div>
+        <div class="small-square red" id="redTab" role="button" tabindex="0">red</div>
+      </div>
+    </section>
+
+    <!-- Slide 3 -->
+    <section class="slide" id="s3" aria-label="Manchester">
+      <div class="center-stack">
+        <div class="small-square dark" id="manchester">Manchester is Red</div>
+        <div style="height:14px"></div>
+        <div class="small-square light" id="letsGo3" role="button" tabindex="0">lets go</div>
+      </div>
+    </section>
+
+    <!-- Slide 4 -->
+    <section class="slide" id="s4" aria-label="Are you ready">
+      <h2 class="white-text">Are you ready for the question?</h2>
+      <div class="choice-row">
+        <div class="small-square green" id="yes4" role="button" tabindex="0">YES</div>
+        <div class="small-square red" id="no4" role="button" tabindex="0">NO</div>
+      </div>
+    </section>
+
+    <!-- Slide 5 -->
+    <section class="slide" id="s5" aria-label="ARE YOU READY BUNDA">
+      <h1>ARE YOU READY BUNDA?!</h1>
+      <div class="choice-row">
+        <div class="small-square green" id="yess5" role="button" tabindex="0">YESS</div>
+        <div class="small-square red" id="no5" role="button" tabindex="0">NO</div>
+      </div>
+    </section>
+
+    <!-- Slide 6 -->
+    <section class="slide" id="s6" aria-label="Left Right">
+      <div class="sides">
+        <div class="side left-side">
+          <div class="small-square" id="left6" role="button" tabindex="0">LEFT</div>
+        </div>
+        <div class="side right-side">
+          <div class="small-square" id="right6" role="button" tabindex="0">RIGHT</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 7 -->
+    <section class="slide" id="s7" aria-label="You're always right">
+      <div class="right-text">YOURE ALWAYS RIGHT!</div>
+    </section>
+
+    <!-- Slide 8 -->
+    <section class="slide" id="s8" aria-label="Puppies">
+      <h2>will you raise puppies with me? 🐶🐶</h2>
+      <div style="height:14px"></div>
+      <div class="small-square green" id="yesss8" role="button" tabindex="0">YESSS</div>
+    </section>
+
+    <!-- Slide 9 -->
+    <section class="slide" id="s9" aria-label="You forgot about our 3">
+      <h2>you forgot about our 3!</h2>
+      <div style="height:14px"></div>
+      <div class="small-square" id="next9" role="button" tabindex="0">next</div>
+    </section>
+
+    <!-- Slide 10 -->
+    <section class="slide" id="s10" aria-label="Main question">
+      <h2>WILL YOU BE VALENTINE FOR THE REST OF OUR LIVES?</h2>
+      <div style="height:18px"></div>
+      <div class="choice-row">
+        <div class="col">
+          <div class="emoji">❤️</div>
+          <div class="small-square green" id="yes10" role="button" tabindex="0">YES</div>
+        </div>
+        <div class="col">
+          <div class="emoji">💔</div>
+          <div class="small-square red" id="no10" role="button" tabindex="0">NO</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 11 -->
+    <section class="slide" id="s11" aria-label="Excellent choice">
+      <canvas id="confettiCanvas"></canvas>
+      <h1 class="celebrate">EXCELLENT CHOICE ❤️</h1>
+    </section>
+
+    <!-- Slide 12 -->
+    <section class="slide" id="s12" aria-label="No response">
+      <div class="small-square" id="noBox" style="background:#fff;color:#c62828">NO? matolo ! go select YES</div>
+      <div style="height:14px"></div>
+      <div class="small-square" id="back12" role="button" tabindex="0" style="background:#fff;color:#0b57c9">back</div>
+    </section>
+
+    <!-- Slide 13 -->
+    <section class="slide" id="s13" aria-label="Final">
+      <div class="final-text">
+        mi Diosa, I Potato you, My Valentine.
+      </div>
+    </section>
+  </main>
+
+  <div id="modal" class="modal" role="status" aria-live="assertive"></div>
+
+  <!-- Link external JS when using files; in CodePen paste JS into JS panel -->
+  <script src="app.js"></script>
+</body>
+</html>
